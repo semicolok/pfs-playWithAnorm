@@ -1,0 +1,13 @@
+application.name = Play Board
+
+boards.details = Board Title : {0}
+
+boards.form = Board Details
+
+boards.new.submit = Add
+
+boards.new.success = Successfully added board {0}.
+
+validation.errors = Please correct the errors in the form.
+
+validation.id.duplicate = A Board with this Id already exists

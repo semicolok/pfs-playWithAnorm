@@ -1,0 +1,17 @@
+@(boardForm: Form[Board])(implicit flash: Flash, lang: Lang)
+@import helper._
+@import helper.twitterBootstrap._
+
+@main(Messages("boards.form")) {
+	<h2>@Messages("boards.form")</h2>
+
+  @helper.form(action = routes.Boards.save()) {
+    <fieldset>
+      @helper.inputText(boardForm("id"))
+      @helper.inputText(boardForm("title"))
+      @helper.inputText(boardForm("writer"))
+      @helper.inputText(boardForm("content"))
+    </fieldset>
+    <p><input type="submit" value='@Messages("boards.new.submit")'></p>
+  }
+}

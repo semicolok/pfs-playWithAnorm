@@ -1,0 +1,7 @@
+@(board: Board)(implicit flash: Flash, lang: Lang)
+
+@main(Messages("boards.details", board.title)) {
+	<h2>@board.title</h2>
+  <h3>@board.writer</h3>
+  <h3>@board.content</h3>
+}
