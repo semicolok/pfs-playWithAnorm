@@ -15,3 +15,5 @@ POST  /boards controllers.Boards.save
 GET  /boards/new controllers.Boards.newBoard
 
 GET  /boards/:id  controllers.Boards.detail(id: Long)
+
+GET  /getDbUrl  controllers.Application.getDbUrl

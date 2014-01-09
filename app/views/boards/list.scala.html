@@ -7,7 +7,7 @@
     </tr>
     @for(board <- boards){
       <tr>
-        <td>@board.id</td><td><a href="@controllers.routes.Boards.detail(board.id)">@board.title</a></td><td>@board.writer</td>
+        <td @(if(board.id < 3) "class='odd'")>@board.id</td><td><a href="@controllers.routes.Boards.detail(board.id)">@board.title</a></td><td>@board.writer</td>
       </tr>
     }
   </table>
