@@ -22,4 +22,8 @@ GET /boards2 controllers.Boards2.getAll
 
 GET  /users controllers.Users.getAll
 
+GET  /users/insert controllers.Users.insertUser
+
+GET  /users/delete/:id controllers.Users.deleteUser(id: Long)
+
 GET  /users/:id controllers.Boards2.findByUserId(id: Long)

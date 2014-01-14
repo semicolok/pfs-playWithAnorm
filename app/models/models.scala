@@ -93,9 +93,20 @@ object User {
   def insert(user: User): Boolean = {
     DB.withConnection { implicit connection =>
       val addedRows = SQL("""insert
-        into User
-        values ({name})""").on("name" -> user.name).excuteUpdate()
+        into User (name)
+        values ({name})""").on("name" -> user.name).executeUpdate()
       addedRows == 1
+    }
+  }
+
+  def delete(id: Long): Boolean = {
+    DB.withConnection { implicit connection =>
+      val updatedRow = SQL("""
+        delete 
+        from user 
+        where id = {id}""").on("id" -> id).executeUpdate()
+
+      updatedRow == 0
     }
   }
 }

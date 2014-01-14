@@ -11,4 +11,14 @@ object Users extends Controller {
     println(User.getAll)
     Ok("success")
   }
+
+  def insertUser = Action { implicit req =>
+    User.insert(User(2L, "testUser"))
+    Ok("success")
+  }
+
+  def deleteUser(id: Long) = Action {implicit req =>
+    User.delete(id)
+    Ok("success")
+  }
 }
