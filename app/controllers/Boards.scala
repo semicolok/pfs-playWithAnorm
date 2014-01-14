@@ -51,4 +51,9 @@ object Boards extends Controller {
       boardForm
     Ok(views.html.boards.form(form))
   }
+
+  def delete(id:Long) = Action {
+    Board.delete(id)
+    Redirect(routes.Boards.list())
+  }
 }

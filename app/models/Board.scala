@@ -19,4 +19,8 @@ object Board {
   def add(board: Board) {
     boards = boards + board
   }
+
+  def delete(id:Long) {
+    println(id)
+  }
 }

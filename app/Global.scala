@@ -18,9 +18,9 @@ object Global extends GlobalSettings {
       val actor = Akka.system.actorOf(
         Props(new BoardActor(board))
         )
-      Akka.system.scheduler.schedule (
-        3.seconds, 5.seconds, actor, "send"
-        )
+      // Akka.system.scheduler.schedule (
+      //   3.seconds, 5.seconds, actor, "send"
+      //   )
       // Akka.system.scheduler.scheduleOnce(10 seconds) {
       //   file.delete()
       // }
